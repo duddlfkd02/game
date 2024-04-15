@@ -1,0 +1,63 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*{margin:0; padding:0;}
+
+body{background-color: #ffffff;
+    color:#333333;
+    font-family: "Quicksand", sans-serif;}
+
+.intro{position:relative;
+        width:100%;
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        background-color:black;
+        color:#ffffff;}
+
+.intro_title::after{
+    content : "|";
+    display: inline-block;
+    font-size: 80px;
+    animation: move 1000ms infinite;
+}
+
+@keyframes move{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+.btn{position:absolute;
+    top:90%;
+    transform: translate(-90%);
+    width:40px;
+    height:40px;
+    opacity: 0;
+    background-image: url("../arrow.png");
+    background-repeat: no-repeat;
+    cursor: pointer;}
+
+#game{width:80%;
+    margin:100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;}
+
+
+.gamebox{width:300px;
+        height:300px;
+        margin:10px;
+        text-align: center;
+        border-radius: 10px;
+        border:2px solid #696969;
+        cursor: pointer;}
+
+.gamebox:hover{background-color: antiquewhite;
+                transition: 0.5s;}
