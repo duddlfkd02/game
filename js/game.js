@@ -27,7 +27,7 @@ window.onload =function(){
 }
 
 const introbtn = document.getElementsByClassName("btn")[0];
-const game = document.getElementsById("game");
+const game = document.querySelector("#game");
 
 introbtn.addEventListener("click", function(){
     game.scrollIntroView({behavior:"smooth"})
