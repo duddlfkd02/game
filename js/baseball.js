@@ -57,16 +57,30 @@ $form.addEventListener('submit',function(e){
     //몇 스트라이크 몇 볼인지 검사
     let strike = 0;
     let ball = 0;
-    for(i = 0; i < answer.length; i++){ // 입력한 숫자 1개씩을 정답과 비교
-        const index = value.indexOf(answer[i]);
-        if(index > -1){ //(0,1,2,3 이니까 -1), 일치하는 숫자 발견
-            if(index === i){ //자리도 같음
+
+    //for문을 forEach로 바꿔보기
+    answer.forEach((element, i) => {
+        const index = value.indexOf(element);
+        if(index > -1){
+            if(index === i){
                 strike += 1;
-            } else { //자리는 다르고 숫자만 같다
+            } else {
                 ball += 1;
             }
         }
-    }
+    })
+
+    // for(i = 0; i < answer.length; i++){ // 입력한 숫자 1개씩을 정답과 비교
+    //     const index = value.indexOf(answer[i]);
+    //     if(index > -1){ //(0,1,2,3 이니까 -1), 일치하는 숫자 발견
+    //         if(index === i){ //자리도 같음
+    //             strike += 1;
+    //         } else { //자리는 다르고 숫자만 같다
+    //             ball += 1;
+    //         }
+    //     }
+    // }
+
     //아웃!
     if(strike === 0 && ball === 0){
         out++;
