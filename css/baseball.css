@@ -18,7 +18,8 @@ form{width:50%;
 form::after{display: block; content: ""; clear: both;}
 
 div{width:50%;
-    margin:30px auto;}
+    margin:30px auto;
+    font-family:  "Noto Sans KR", sans-serif;}
 
 input{width:98%;
         height:40px;
@@ -36,15 +37,3 @@ button{border:none;
         background-color: #2f60ff;
         float: right;
         cursor: pointer;}
-
-.ball{
-    display: inline-block;
-    border:2px solid #222;
-    border-radius: 20px;
-    width:40px;
-    height:40px;
-    line-height: 40px;
-    font-size: 20px;
-    text-align: center;
-    margin-right: 20px;
-}
